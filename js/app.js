@@ -33,13 +33,19 @@ function askUser(question, onYes, onNo) {
     }
 }
 //  ask for name
-const name = prompt("What is your name", "user");
+let name
+while (true) {
+    name = prompt("What is your name", "user");
+    if (name === null || name === "")
+        continue;
+    break;
+}
 alert(`Welcome ${name} to my website`);
 alert("Please answer the following questions by yes or no");
 questions.forEach(q => {
-    let { question, yes, no } = q
-    q.answer = askUser(prompt(question, "no"), yes, no)
+    let { question, yes, no } = q;
+    q.answer = askUser(prompt(question, "no"), yes, no);
 })
 console.log(questions);
 
-document.querySelector(".user").innerHTML = name
+document.querySelector(".user").innerHTML = name;
