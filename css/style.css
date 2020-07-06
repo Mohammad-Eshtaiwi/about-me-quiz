@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Modak&family=Noto+Sans+JP&display=swap");
+/* font-family: 'Modak', cursive;
+font-family: 'Noto Sans JP', sans-serif; */
+body {
+  font-size: 15px;
+  line-height: 1.5;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.container {
+  padding: 40px;
+}
+.text-center {
+  text-align: center;
+}
+h1,
+h2 {
+  font-family: "Modak", cursive;
+  margin: 20px 0;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2.5rem;
+}
+p {
+  font-size: 1rem;
+}
+
+header h1 {
+  position: relative;
+}
+header h1::before {
+  content: "";
+}
