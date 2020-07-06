@@ -1,7 +1,16 @@
 "use strict";
+const questions = [
+    { question: "Is Mohammad Tall person?", yes: "oh thx brat/sestra", no: "how dare you?!", answer: "" },
+    { question: "Is Mohammad a smart person?", yes: "you have to be smart to realize that", no: "how dare you?!", answer: "" },
+    { question: "Is Mohammad addicted to video games?", yes: "Sadly yes", no: "Actually yes he is", answer: "" },
+    { question: "Is Mohammad good at programming?", yes: "Not yet but he is doing his best", no: "He promised himself to be better and he will", answer: "" },
+    { question: "Does Mohammad miss Sora?", yes: ":(", no: "Very wrong :(", answer: "" },
+]
 function askUser(question, onYes, onNo) {
     // added while to make validation
     while (true) {
+        console.log(question);
+
         if (question === null) {
             question = prompt("I kindly asked to asnswer by yes or no 🔪", "yes")
             continue
@@ -27,22 +36,10 @@ function askUser(question, onYes, onNo) {
 const name = prompt("What is your name", "user");
 alert(`Welcome ${name} to my website`);
 alert("Please answer the following questions by yes or no");
-//is tall
-const isTall = askUser(prompt("Is Mohammad Tall person?", "no"), "oh thx brat/sestra", "how dare you?!");
-console.log(isTall);
+questions.forEach(q => {
+    let { question, yes, no } = q
+    q.answer = askUser(prompt(question, "no"), yes, no)
+})
+console.log(questions);
 
-//is smart
-const isSmart = askUser(prompt("Is Mohammad a smart person?", "no"), "you have to be smart to realize that", "how dare you?!");
-
-//is adicted
-const isAddicted = askUser(prompt("Is Mohammad addicted to video games?", "no"), "Sadly yes", "Actually yes he is");
-
-//is programer
-
-let isProgramer = askUser(prompt("Is Mohammad good at programming?", "no"), "Not yet but he is doing his best", "He promised himself to be better and he will")
-
-//miss sora
-const isMissSora = askUser(prompt("Does Mohammad miss Sora?", "no"), ":(", "Very wrong");
-
-console.log(isTall, isAddicted, isProgramer, isSmart, isMissSora);
 document.querySelector(".user").innerHTML = name
