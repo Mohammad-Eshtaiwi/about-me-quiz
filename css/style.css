@@ -13,7 +13,8 @@ body {
   text-align: center;
 }
 h1,
-h2 {
+h2,
+h3 {
   font-family: "Modak", cursive;
   margin: 20px 0;
 }
@@ -22,6 +23,9 @@ h1 {
 }
 h2 {
   font-size: 2.5rem;
+}
+h3 {
+  font-size: 2rem;
 }
 p {
   font-size: 1rem;
@@ -32,4 +36,30 @@ header h1 {
 }
 header h1::before {
   content: "";
+}
+/* my fav songs */
+.my-fav-songs .container {
+  display: grid;
+}
+.my-fav-songs ol {
+  list-style: decimal;
+  display: grid;
+  margin: auto;
+  margin: 0 auto;
+  grid-template-columns: repeat(2, 100px);
+  justify-items: center;
+  justify-self: center;
+}
+/* xp */
+.xp ul {
+  list-style: square;
+  padding-left: 20px;
+}
+.xp ul ul {
+  list-style: circle;
+}
+/* footer */
+footer {
+  color: white;
+  background-color: black;
 }
