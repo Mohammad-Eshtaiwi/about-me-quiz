@@ -122,7 +122,7 @@ function maltipleChoice(attmeps = 6) {
     // if he answered correctly it will win
     for (let index = 0; index < answers.length; index++) {
       if (answers[index] === question) {
-        alert("Well done!");
+        alert(`Well done! I used to call her ${answers}`);
         return 1;
       }
     }
@@ -133,6 +133,7 @@ function maltipleChoice(attmeps = 6) {
     );
     count++;
   }
+  alert(`game over I used to call her  ${answers}`);
   return 0;
 }
 //  ask for name
